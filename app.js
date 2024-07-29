@@ -1,6 +1,13 @@
 const express = require('express')
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
 
 const app = express();
+app.use(cors(corsOptions))
 
 app.get('/', async (req, res) => {
   let resp = req.query.message
@@ -9,7 +16,7 @@ app.get('/', async (req, res) => {
     res.send('Hello')
   }
   else
-  res.send(resp + '123')
+  res.json({'text' : resp + '123'})
 });
 
 app.listen(8000, () => {

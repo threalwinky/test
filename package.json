@@ -4,13 +4,14 @@
   "description": "",
   "main": "a.js",
   "scripts": {
-    "start" : "node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vũ <voquangvu09112006@gmail.com>",
   "license": "ISC",
   "repository": "https://github.com/threalwinky/test.git",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2"
   }
 }
